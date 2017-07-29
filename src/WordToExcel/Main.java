@@ -10,9 +10,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("interface.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("interface.fxml"));
+        Parent root = loader.load();
+        Controller controller = (Controller) loader.getController();
+        controller.init(primaryStage);
+        primaryStage.setTitle("Excel to Word");
+        primaryStage.setScene(new Scene(root, 1000, 800));
         primaryStage.show();
     }
 
