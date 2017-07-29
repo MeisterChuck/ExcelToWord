@@ -1,4 +1,4 @@
-package sample;
+package WordToExcel;
 
 public class Controller {
 }
