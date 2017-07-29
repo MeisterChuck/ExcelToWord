@@ -31,6 +31,8 @@ public class Controller implements Initializable{
         System.out.println("Open File");
 
         FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Excel Files", "*.xlsx"));
+
         File file = fileChooser.showOpenDialog(stage);
 
         if(file != null){
